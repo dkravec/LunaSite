@@ -1,0 +1,40 @@
+{
+  "render": true,
+  "faqs": [
+    {
+      "shown": true,
+      "question": "Does Luna only cover planets?",
+      "answer": "No. Luna's catalog is built for planets, moons, satellites, and other celestial bodies. The app can grow as the JSON catalog grows."
+    },
+    {
+      "shown": true,
+      "question": "Does Luna require AR?",
+      "answer": "No. AR mode is available on supported iPhone and iPad devices, but Luna also includes a full visual mode for exploring scenes without AR."
+    },
+    {
+      "shown": true,
+      "question": "What NASA content does Luna use?",
+      "answer": "Luna uses NASA/JPL textures, NASA Scientific Visualization Studio imagery, NASA 3D assets, and NASA Astronomy Picture of the Day. Source credits are included in the app."
+    },
+    {
+      "shown": true,
+      "question": "Is Luna endorsed by NASA?",
+      "answer": "No. Luna credits NASA sources where used, but Luna is an independent app and is not endorsed by NASA."
+    },
+    {
+      "shown": true,
+      "question": "How is the body catalog loaded?",
+      "answer": "The app uses a local JSON-backed catalog for body facts, orbit values, tags, texture names, model names, and related body data."
+    },
+    {
+      "shown": true,
+      "question": "What is Astronomy Picture of the Day?",
+      "answer": "NASA Astronomy Picture of the Day, often called APOD, is a daily image or video with title, date, explanation, and attribution. Luna includes APOD as part of its discovery experience."
+    },
+    {
+      "shown": true,
+      "question": "Where can I download Luna?",
+      "answer": "Luna is currently available through TestFlight. The download link on this site will be changed to the App Store link later."
+    }
+  ]
+}

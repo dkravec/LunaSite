@@ -1,0 +1,19 @@
+{
+  "render": true,
+  "entries": [
+    {
+      "version": "1.0 beta",
+      "date": "2026-05-16",
+      "shown": true,
+      "changes": [
+        "Initial Luna beta site for luna.novapro.net",
+        "AR and non-AR visual space experiences",
+        "Object mode for focused body exploration",
+        "Orbit playback, object rotation, labels, and orbit guides",
+        "JSON-backed catalog for planets, moons, satellites, and other bodies",
+        "NASA/JPL, NASA SVS, and NASA 3D asset credits",
+        "NASA Astronomy Picture of the Day feature"
+      ]
+    }
+  ]
+}

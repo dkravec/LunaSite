@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Luna - Explore Space in AR</title>
+  <meta name="description" content="Luna is a NASA-backed educational space app for exploring planets, moons, satellites, and other celestial bodies in AR and visual mode." />
+  <meta name="theme-color" content="#05060a" />
+  <meta name="author" content="Daniel Kravec" />
+  <meta name="keywords" content="Luna, astronomy app, AR space app, planets, moons, satellites, NASA imagery, Astronomy Picture of the Day" />
+  <link rel="canonical" href="https://luna.novapro.net/" />
+  <link rel="icon" type="image/png" href="assets/img/app-icon.png" />
+  <link rel="apple-touch-icon" href="assets/img/app-icon.png" />
+  <link rel="preload" as="style" href="assets/styles.css" />
+  <link rel="preload" as="image" href="assets/img/milkyway.jpg" />
+  <link rel="preload" as="script" href="assets/main.js" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Luna - Explore Space in AR" />
+  <meta property="og:description" content="Browse a JSON-backed space catalog, inspect celestial body facts, and step into orbit with AR experiences." />
+  <meta property="og:image" content="https://luna.novapro.net/assets/img/app-icon.png" />
+  <meta property="og:url" content="https://luna.novapro.net/" />
+  <meta property="og:site_name" content="Luna" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Luna - Explore Space in AR" />
+  <meta name="twitter:description" content="Planets, moons, satellites, APOD, and NASA-backed visuals in one educational space app." />
+  <meta name="twitter:image" content="https://luna.novapro.net/assets/img/app-icon.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Luna",
+    "description": "A NASA-backed educational space app for exploring planets, moons, satellites, and other celestial bodies in AR and visual mode.",
+    "applicationCategory": "EducationApplication",
+    "operatingSystem": "iOS, iPadOS, macOS",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://testflight.apple.com/join/estR1gfD",
+      "priceCurrency": "USD",
+      "price": "0"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "NovaPro",
+      "url": "https://novapro.net"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="https://swetrix.org/swetrix.js" defer></script>
+  <noscript>
+    <img src="https://analytics.novapro.net/backend/log/noscript?pid=LSZ6ytCGblVs" alt="" referrerpolicy="no-referrer-when-downgrade" />
+  </noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container site-header__inner">
+      <a href="/" class="site-logo" aria-label="Luna home">
+        <img src="assets/img/app-icon.png" alt="" class="site-logo__icon" width="32" height="32" />
+        <span>Luna</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul id="nav-links" class="nav-links"></ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__media" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <p class="eyebrow">NASA-backed visuals. AR-ready exploration.</p>
+        <h1 id="hero-heading">Luna</h1>
+        <p class="hero__sub">Explore planets, moons, satellites, and other celestial bodies with interactive facts, orbit playback, object mode, and Astronomy Picture of the Day.</p>
+        <div class="hero__ctas">
+          <a href="https://testflight.apple.com/join/estR1gfD" class="btn btn--primary" target="_blank" rel="noopener">Join TestFlight</a>
+          <a href="#experience" class="btn btn--secondary">Explore Features</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section" aria-labelledby="experience-heading">
+      <div class="container">
+        <h2 id="experience-heading" class="section__heading">Built for Space You Can Actually Explore</h2>
+        <p class="section__sub">Luna turns the solar system into a hands-on scene, with controls for scale, motion, and detail.</p>
+        <div class="features__grid">
+          <article class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">AR</span>
+            <h3>AR and Visual Modes</h3>
+            <p>Place space scenes in your room when AR is available, or use the full non-AR visual mode on every supported platform.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">OR</span>
+            <h3>Orbit Playback</h3>
+            <p>Watch bodies move through orbit with labels, orbit guides, and speed controls that make motion readable.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">3D</span>
+            <h3>Object Mode</h3>
+            <p>Open a body on its own, rotate it, inspect its surface, and focus on one world or spacecraft at a time.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">JS</span>
+            <h3>JSON-Backed Catalog</h3>
+            <p>The app loads its space library from structured JSON, keeping facts, tags, model names, and orbit data easy to expand.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">FT</span>
+            <h3>Detailed Facts</h3>
+            <p>Compare radius, distance, gravity, orbital period, rotation period, axial tilt, related bodies, and overview notes.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">AP</span>
+            <h3>Astronomy Picture of the Day</h3>
+            <p>Bring NASA APOD into Luna with the daily image, title, date, explanation, and attribution alongside the exploration tools.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="nasa" class="section section--visual" aria-labelledby="nasa-heading">
+      <div class="container visual-split">
+        <div class="visual-split__copy">
+          <p class="eyebrow">NASA-backed assets</p>
+          <h2 id="nasa-heading" class="section__heading align-left">Real Sources, Carefully Credited</h2>
+          <p>Luna uses NASA/JPL and NASA Scientific Visualization Studio imagery, NASA 3D assets, and a bundled credits catalog so the source trail stays visible.</p>
+          <p>The catalog is not only planets. It includes moons, satellites, and other bodies, giving the app room to grow beyond the usual solar-system tour.</p>
+          <p class="fine-print">NASA assets are credited in Luna. Luna is an independent app and is not endorsed by NASA.</p>
+        </div>
+        <div class="texture-grid" aria-label="Examples of Luna body textures">
+          <img src="assets/img/bodies/earth.jpg" alt="Earth texture used by Luna" loading="lazy" />
+          <img src="assets/img/bodies/moon.jpg" alt="Moon texture used by Luna" loading="lazy" />
+          <img src="assets/img/bodies/mars.jpg" alt="Mars texture used by Luna" loading="lazy" />
+          <img src="assets/img/bodies/jupiter.jpg" alt="Jupiter texture used by Luna" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="apod" class="section" aria-labelledby="apod-heading">
+      <div class="container apod-panel">
+        <div>
+          <p class="eyebrow">Daily discovery</p>
+          <h2 id="apod-heading" class="section__heading align-left">NASA Astronomy Picture of the Day</h2>
+          <p>Luna includes APOD as a daily window into the wider universe, pairing NASA imagery or video with context you can read before jumping back into the interactive catalog.</p>
+        </div>
+        <a href="https://testflight.apple.com/join/estR1gfD" class="btn btn--secondary" target="_blank" rel="noopener">Try Luna</a>
+      </div>
+    </section>
+
+    <section id="bodies" class="section section--alt" aria-labelledby="bodies-heading">
+      <div class="container">
+        <h2 id="bodies-heading" class="section__heading">From JSON to Orbit</h2>
+        <p class="section__sub">A few highlights from the same style of catalog data Luna uses in the app.</p>
+        <div id="body-highlights" class="body-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="faq" class="section" aria-labelledby="faq-heading">
+      <div class="container narrow">
+        <h2 id="faq-heading" class="section__heading">Frequently Asked Questions</h2>
+        <div id="faq-list" class="faq__list"></div>
+      </div>
+    </section>
+
+    <section class="section cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading" class="section__heading">Step Into Space With Luna</h2>
+        <p class="section__sub">Join the TestFlight now. The App Store link can drop in here later without changing the site structure.</p>
+        <a href="https://testflight.apple.com/join/estR1gfD" class="btn btn--primary" target="_blank" rel="noopener">Join TestFlight</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container site-footer__inner">
+      <span class="site-logo">
+        <img src="assets/img/app-icon.png" alt="" class="site-logo__icon" width="32" height="32" />
+        <span>Luna</span>
+      </span>
+      <ul id="footer-links" class="footer__links"></ul>
+      <p id="footer-copy" class="footer__copy"></p>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
