@@ -125,9 +125,8 @@
           <div>
             <p class="eyebrow">Screenshots</p>
             <h2 id="screenshots-heading" class="section__heading align-left">See Luna Across Devices</h2>
-            <p class="section__sub align-left">Drop screenshots into the named folders and these placeholders will become the real gallery.</p>
+            <p class="section__sub align-left">Drop screenshots into the named folders and these placeholders will become a left-to-right gallery.</p>
           </div>
-          <button id="screenshots-toggle" class="btn btn--secondary" type="button" aria-expanded="true" aria-controls="screenshots-panel">Hide screenshots</button>
         </div>
 
         <div id="screenshots-panel" class="screenshots-panel">
@@ -137,7 +136,8 @@
             <button class="screenshot-tab" type="button" role="tab" aria-selected="false" data-screenshot-tab="mac">Mac</button>
           </div>
 
-          <div id="screenshot-gallery" class="screenshot-gallery" aria-live="polite"></div>
+          <div id="screenshot-gallery" class="screenshot-gallery" aria-live="polite" tabindex="0"></div>
+          <p class="screenshot-note">Suggested extras: APOD, object mode, scaling controls, settings, and NASA credits.</p>
         </div>
       </div>
     </section>

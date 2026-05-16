@@ -121,9 +121,12 @@
       items: [
         { title: "Home", file: "home.png" },
         { title: "Explore", file: "explore.png" },
-        { title: "AR", file: "ar.png" },
+        { title: "Explore Detail", file: "explore-detail-mode.png" },
+        { title: "Object Mode", file: "object-mode.png" },
         { title: "Scene", file: "scene.png" },
-        { title: "Explore Detail Mode", file: "explore-detail-mode.png" }
+        { title: "AR", file: "ar.png" },
+        { title: "APOD", file: "apod.png" },
+        { title: "Settings", file: "settings.png" }
       ]
     },
     ipad: {
@@ -133,9 +136,11 @@
       items: [
         { title: "Home", file: "home.png" },
         { title: "Explore", file: "explore.png" },
-        { title: "AR", file: "ar.png" },
+        { title: "Explore Detail", file: "explore-detail-mode.png" },
         { title: "Scene", file: "scene.png" },
-        { title: "Explore Detail Mode", file: "explore-detail-mode.png" }
+        { title: "AR", file: "ar.png" },
+        { title: "APOD", file: "apod.png" },
+        { title: "Settings", file: "settings.png" }
       ]
     },
     mac: {
@@ -145,9 +150,11 @@
       items: [
         { title: "Home", file: "home.png" },
         { title: "Explore", file: "explore.png" },
+        { title: "Explore Detail", file: "explore-detail-mode.png" },
         { title: "Scene", file: "scene.png" },
         { title: "Object Mode", file: "object-mode.png" },
-        { title: "Explore Detail Mode", file: "explore-detail-mode.png" }
+        { title: "APOD", file: "apod.png" },
+        { title: "NASA Credits", file: "credits.png" }
       ]
     }
   };
@@ -196,8 +203,6 @@
     if (!gallery) return;
 
     var tabs = Array.prototype.slice.call(document.querySelectorAll("[data-screenshot-tab]"));
-    var toggle = document.getElementById("screenshots-toggle");
-    var panel = document.getElementById("screenshots-panel");
     var activeDevice = "iphone";
 
     function setActive(device) {
@@ -207,6 +212,7 @@
         tab.setAttribute("aria-selected", selected ? "true" : "false");
       });
       renderScreenshotGallery(activeDevice);
+      if (gallery.scrollTo) gallery.scrollTo({ left: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
     }
 
     tabs.forEach(function (tab) {
@@ -214,16 +220,6 @@
         setActive(tab.getAttribute("data-screenshot-tab"));
       });
     });
-
-    if (toggle && panel) {
-      toggle.addEventListener("click", function () {
-        var isExpanded = toggle.getAttribute("aria-expanded") === "true";
-        toggle.setAttribute("aria-expanded", isExpanded ? "false" : "true");
-        toggle.textContent = isExpanded ? "Show screenshots" : "Hide screenshots";
-        panel.hidden = isExpanded;
-      });
-    }
-
     setActive(activeDevice);
   }
 
