@@ -16,6 +16,7 @@
 
   var NAV_LINKS = [
     { href: "#experience", text: "Features", class: "nav-link--text" },
+    { href: "#screenshots", text: "Screenshots", class: "nav-link--text" },
     { href: "#nasa", text: "NASA", class: "nav-link--text" },
     { href: "#bodies", text: "Bodies", class: "nav-link--text" },
     { href: DOWNLOAD_URL, text: "TestFlight", class: "btn btn--outline btn--small", external: true }
@@ -109,6 +110,121 @@
     if (value >= 1000000000) return (value / 1000000000).toFixed(1).replace(/\.0$/, "") + "B km";
     if (value >= 1000000) return (value / 1000000).toFixed(1).replace(/\.0$/, "") + "M km";
     return Math.round(value).toLocaleString() + " km";
+  }
+
+
+  var SCREENSHOT_SETS = {
+    iphone: {
+      label: "iPhone",
+      basePath: "img/screenshots/iphone/",
+      frameClass: "screenshot-card--phone",
+      items: [
+        { title: "Home", file: "home.png" },
+        { title: "Explore", file: "explore.png" },
+        { title: "AR", file: "ar.png" },
+        { title: "Scene", file: "scene.png" },
+        { title: "Explore Detail Mode", file: "explore-detail-mode.png" }
+      ]
+    },
+    ipad: {
+      label: "iPad",
+      basePath: "img/screenshots/ipad/",
+      frameClass: "screenshot-card--tablet",
+      items: [
+        { title: "Home", file: "home.png" },
+        { title: "Explore", file: "explore.png" },
+        { title: "AR", file: "ar.png" },
+        { title: "Scene", file: "scene.png" },
+        { title: "Explore Detail Mode", file: "explore-detail-mode.png" }
+      ]
+    },
+    mac: {
+      label: "Mac",
+      basePath: "img/screenshots/mac/",
+      frameClass: "screenshot-card--desktop",
+      items: [
+        { title: "Home", file: "home.png" },
+        { title: "Explore", file: "explore.png" },
+        { title: "Scene", file: "scene.png" },
+        { title: "Object Mode", file: "object-mode.png" },
+        { title: "Explore Detail Mode", file: "explore-detail-mode.png" }
+      ]
+    }
+  };
+
+  function imageExists(src, callback) {
+    var image = new Image();
+    image.onload = function () { callback(true); };
+    image.onerror = function () { callback(false); };
+    image.src = src;
+  }
+
+  function renderScreenshotGallery(device) {
+    var gallery = document.getElementById("screenshot-gallery");
+    if (!gallery) return;
+
+    var set = SCREENSHOT_SETS[device] || SCREENSHOT_SETS.iphone;
+    gallery.innerHTML = "";
+
+    set.items.forEach(function (item) {
+      var path = assetBase + set.basePath + item.file;
+      var card = document.createElement("article");
+      card.className = "screenshot-card " + set.frameClass;
+      card.innerHTML =
+        '<div class="screenshot-frame" data-state="placeholder">' +
+          '<div class="screenshot-placeholder">' +
+            '<span class="screenshot-placeholder__device">' + escapeHTML(set.label) + '</span>' +
+            '<strong>' + escapeHTML(item.title) + '</strong>' +
+            '<code>' + escapeHTML("assets/" + set.basePath + item.file) + '</code>' +
+          '</div>' +
+        '</div>' +
+        '<h3>' + escapeHTML(item.title) + '</h3>';
+
+      gallery.appendChild(card);
+
+      imageExists(path, function (exists) {
+        if (!exists) return;
+        var frame = card.querySelector(".screenshot-frame");
+        frame.setAttribute("data-state", "image");
+        frame.innerHTML = '<img src="' + escapeHTML(path) + '" alt="Luna ' + escapeHTML(item.title) + ' screenshot on ' + escapeHTML(set.label) + '" loading="lazy" />';
+      });
+    });
+  }
+
+  function initScreenshotSection() {
+    var gallery = document.getElementById("screenshot-gallery");
+    if (!gallery) return;
+
+    var tabs = Array.prototype.slice.call(document.querySelectorAll("[data-screenshot-tab]"));
+    var toggle = document.getElementById("screenshots-toggle");
+    var panel = document.getElementById("screenshots-panel");
+    var activeDevice = "iphone";
+
+    function setActive(device) {
+      activeDevice = device;
+      tabs.forEach(function (tab) {
+        var selected = tab.getAttribute("data-screenshot-tab") === device;
+        tab.setAttribute("aria-selected", selected ? "true" : "false");
+      });
+      renderScreenshotGallery(activeDevice);
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        setActive(tab.getAttribute("data-screenshot-tab"));
+      });
+    });
+
+    if (toggle && panel) {
+      toggle.addEventListener("click", function () {
+        var isExpanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", isExpanded ? "false" : "true");
+        toggle.textContent = isExpanded ? "Show screenshots" : "Hide screenshots";
+        panel.hidden = isExpanded;
+      });
+    }
+
+    setActive(activeDevice);
   }
 
   function loadBodyHighlights() {
@@ -220,6 +336,7 @@
   injectNavLinks();
   injectFooterLinks();
   injectFooterCopy();
+  initScreenshotSection();
   loadBodyHighlights();
   loadFaq();
   loadChangelog();
