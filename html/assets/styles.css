@@ -71,10 +71,16 @@ h1 { font-size: clamp(3.25rem, 12vw, 7.5rem); line-height: 0.95; font-weight: 85
 .section__sub.align-left { text-align: left; margin-left: 0; margin-right: 0; }
 .section__sub, .lead { max-width: 680px; color: var(--muted); font-size: 1.05rem; text-align: center; margin: 0 auto var(--sp-7); }
 .lead { text-align: left; margin-inline: 0; margin-bottom: var(--sp-6); }
+.listing-section { background: #080a10; }
+.listing-copy { display: grid; gap: var(--sp-4); color: var(--muted); font-size: 1.08rem; }
 .features__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sp-4); }
 .feature-card, .body-card, .apod-panel, .prose, .changelog-entry { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
-.feature-card { padding: var(--sp-5); min-height: 236px; }
-.feature-card__icon { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 32px; margin-bottom: var(--sp-4); border-radius: 7px; background: rgba(100,215,198,0.12); color: var(--accent); font-size: 0.82rem; font-weight: 850; }
+.feature-card { position: relative; padding: var(--sp-5); min-height: 220px; overflow: hidden; }
+.feature-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--feature-color, var(--accent)); }
+.feature-card__type { display: inline-flex; margin-bottom: var(--sp-4); padding: 0.28rem 0.5rem; border-radius: 6px; background: color-mix(in srgb, var(--feature-color, var(--accent)) 18%, transparent); color: var(--feature-color, var(--accent)); font-size: 0.76rem; font-weight: 850; letter-spacing: 0.06em; text-transform: uppercase; }
+.feature-card--explore { --feature-color: var(--accent); }
+.feature-card--experience { --feature-color: var(--accent-2); }
+.feature-card--more { --feature-color: var(--accent-3); }
 .feature-card h3, .body-card h3 { font-size: 1.12rem; line-height: 1.2; margin-bottom: var(--sp-2); }
 .feature-card p, .body-card p, .visual-split p, .apod-panel p { color: var(--muted); }
 .visual-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr); gap: var(--sp-7); align-items: center; }

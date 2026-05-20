@@ -15,10 +15,9 @@
   var DOWNLOAD_URL = "https://testflight.apple.com/join/estR1gfD";
 
   var NAV_LINKS = [
-    { href: "#experience", text: "Features", class: "nav-link--text" },
+    { href: "#overview", text: "Overview", class: "nav-link--text" },
+    { href: "#features", text: "Features", class: "nav-link--text" },
     { href: "#screenshots", text: "Screenshots", class: "nav-link--text" },
-    { href: "#nasa", text: "NASA", class: "nav-link--text" },
-    { href: "#bodies", text: "Bodies", class: "nav-link--text" },
     { href: DOWNLOAD_URL, text: "TestFlight", class: "btn btn--outline btn--small", external: true }
   ];
 
@@ -119,14 +118,13 @@
       basePath: "img/screenshots/iphone/",
       frameClass: "screenshot-card--phone",
       items: [
-        { title: "Home", file: "home.png" },
-        { title: "Explore", file: "explore.png" },
-        { title: "Explore Detail", file: "explore-detail-mode.png" },
-        { title: "Object Mode", file: "object-mode.png" },
-        { title: "Scene", file: "scene.png" },
-        { title: "AR", file: "ar.png" },
-        { title: "APOD", file: "apod.png" },
-        { title: "Settings", file: "settings.png" }
+        { title: "AR Placement", file: "ar.png" },
+        { title: "Interactive 3D", file: "scene.png" },
+        { title: "Scale Controls", file: "settings.png" },
+        { title: "Object Detail", file: "explore-detail-mode.png" },
+        { title: "Picture of the Day", file: "apod.png" },
+        { title: "Explore Library", file: "explore.png" },
+        { title: "Home", file: "home.png" }
       ]
     },
     ipad: {
@@ -134,13 +132,13 @@
       basePath: "img/screenshots/ipad/",
       frameClass: "screenshot-card--tablet",
       items: [
-        { title: "Home", file: "home.png" },
-        { title: "Explore", file: "explore.png" },
-        { title: "Explore Detail", file: "explore-detail-mode.png" },
-        { title: "Scene", file: "scene.png" },
-        { title: "AR", file: "ar.png" },
-        { title: "APOD", file: "apod.png" },
-        { title: "Settings", file: "settings.png" }
+        { title: "AR Placement", file: "ar.png" },
+        { title: "Interactive 3D", file: "scene.png" },
+        { title: "Scale Controls", file: "settings.png" },
+        { title: "Object Detail", file: "explore-detail-mode.png" },
+        { title: "Picture of the Day", file: "apod.png" },
+        { title: "Explore Library", file: "explore.png" },
+        { title: "Home", file: "home.png" }
       ]
     },
     mac: {
@@ -148,12 +146,11 @@
       basePath: "img/screenshots/mac/",
       frameClass: "screenshot-card--desktop",
       items: [
+        { title: "Interactive 3D", file: "scene.png" },
+        { title: "Explore Library", file: "explore.png" },
+        { title: "Object Detail", file: "explore-detail-mode.png" },
+        { title: "Picture of the Day", file: "apod.png" },
         { title: "Home", file: "home.png" },
-        { title: "Explore", file: "explore.png" },
-        { title: "Explore Detail", file: "explore-detail-mode.png" },
-        { title: "Scene", file: "scene.png" },
-        { title: "Object Mode", file: "object-mode.png" },
-        { title: "APOD", file: "apod.png" },
         { title: "NASA Credits", file: "credits.png" }
       ]
     }
