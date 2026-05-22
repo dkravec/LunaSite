@@ -118,13 +118,29 @@
       basePath: "img/screenshots/iphone/",
       frameClass: "screenshot-card--phone",
       items: [
-        { title: "AR Placement", file: "ar.png" },
-        { title: "Interactive 3D", file: "scene.png" },
-        { title: "Scale Controls", file: "settings.png" },
-        { title: "Object Detail", file: "explore-detail-mode.png" },
-        { title: "Picture of the Day", file: "apod.png" },
-        { title: "Explore Library", file: "explore.png" },
-        { title: "Home", file: "home.png" }
+        { title: "Space Highlights", file: "Screenshot 01.png" },
+        { title: "AR Placement", file: "Screenshot 02.png" },
+        { title: "Interactive 3D", file: "Screenshot 03.png" },
+        { title: "Explore Library", file: "Screenshot 04.png" },
+        { title: "Iconic NASA", file: "Screenshot 05.png" },
+        { title: "Home Screen Widgets", file: "Screenshot 06.png" },
+        { title: "Luna Facts", file: "Screenshot 07.png" },
+        { title: "Scale Controls", file: "Screenshot 08.png" },
+      ]
+    },
+    iphone8plus: {
+      label: "iPhone 8 Plus",
+      basePath: "img/screenshots/iphone8plus/",
+      frameClass: "screenshot-card--oldphone",
+      items: [
+        { title: "Space Highlights", file: "Screenshot 01.png" },
+        { title: "AR Placement", file: "Screenshot 02.png" },
+        { title: "Interactive 3D", file: "Screenshot 03.png" },
+        { title: "Explore Library", file: "Screenshot 04.png" },
+        { title: "Iconic NASA", file: "Screenshot 05.png" },
+        { title: "Home Screen Widgets", file: "Screenshot 06.png" },
+        { title: "Luna Facts", file: "Screenshot 07.png" },
+        { title: "Scale Controls", file: "Screenshot 08.png" },
       ]
     },
     ipad: {
@@ -132,13 +148,14 @@
       basePath: "img/screenshots/ipad/",
       frameClass: "screenshot-card--tablet",
       items: [
-        { title: "AR Placement", file: "ar.png" },
-        { title: "Interactive 3D", file: "scene.png" },
-        { title: "Scale Controls", file: "settings.png" },
-        { title: "Object Detail", file: "explore-detail-mode.png" },
-        { title: "Picture of the Day", file: "apod.png" },
-        { title: "Explore Library", file: "explore.png" },
-        { title: "Home", file: "home.png" }
+        { title: "Space Highlights", file: "Screenshot 01.png" },
+        { title: "AR Placement", file: "Screenshot 02.png" },
+        { title: "Interactive 3D", file: "Screenshot 03.png" },
+        { title: "Explore Library", file: "Screenshot 04.png" },
+        { title: "Iconic NASA", file: "Screenshot 05.png" },
+        { title: "Home Screen Widgets", file: "Screenshot 06.png" },
+        { title: "Luna Facts", file: "Screenshot 07.png" },
+        { title: "Scale Controls", file: "Screenshot 08.png" },
       ]
     },
     mac: {
@@ -146,12 +163,12 @@
       basePath: "img/screenshots/mac/",
       frameClass: "screenshot-card--desktop",
       items: [
-        { title: "Interactive 3D", file: "scene.png" },
-        { title: "Explore Library", file: "explore.png" },
-        { title: "Object Detail", file: "explore-detail-mode.png" },
-        { title: "Picture of the Day", file: "apod.png" },
-        { title: "Home", file: "home.png" },
-        { title: "NASA Credits", file: "credits.png" }
+        { title: "Space Highlights", file: "Screenshot 01.png" },
+        { title: "Interactive 3D", file: "Screenshot 02.png" },
+        { title: "Explore Library", file: "Screenshot 03.png" },
+        { title: "Iconic NASA", file: "Screenshot 04.png" },
+        { title: "Luna Facts", file: "Screenshot 05.png" },
+        { title: "Scale Controls", file: "Screenshot 06.png" },
       ]
     }
   };
