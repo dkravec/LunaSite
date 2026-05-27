@@ -58,6 +58,9 @@ a:hover { text-decoration: underline; }
 h1 { font-size: clamp(3.25rem, 12vw, 7.5rem); line-height: 0.95; font-weight: 850; letter-spacing: 0; margin-bottom: var(--sp-4); }
 .hero__sub { max-width: 680px; color: var(--text); font-size: clamp(1.1rem, 2.2vw, 1.45rem); line-height: 1.45; margin-bottom: var(--sp-6); }
 .hero__ctas { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-3); }
+.store-badge { display: inline-flex; align-items: center; justify-content: center; line-height: 0; text-decoration: none; }
+.store-badge:hover { text-decoration: none; transform: translateY(-1px); }
+.store-badge__image { display: block; width: 180px; max-width: 100%; height: auto; }
 .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0.8rem 1.15rem; border-radius: var(--radius); font-weight: 750; line-height: 1; border: 1px solid transparent; transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease; }
 .btn:hover { text-decoration: none; transform: translateY(-1px); }
 .btn--primary { background: var(--accent); color: #07100f; box-shadow: 0 12px 32px rgba(100,215,198,0.2); }
@@ -119,6 +122,7 @@ h1 { font-size: clamp(3.25rem, 12vw, 7.5rem); line-height: 0.95; font-weight: 85
 @media (max-width: 640px) { .screenshot-tabs { width: 100%; display: grid; grid-template-columns: repeat(3, 1fr); } .screenshot-gallery { gap: var(--sp-4); padding-inline: var(--sp-1); } }
 
 .apod-panel { display: flex; justify-content: space-between; align-items: center; gap: var(--sp-5); padding: var(--sp-6); background-image: linear-gradient(135deg, rgba(100,215,198,0.12), rgba(255,180,84,0.08)); }
+.cta__actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--sp-3); }
 .body-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--sp-4); }
 .body-card { padding: var(--sp-5); }
 .body-card__type { display: inline-flex; margin-bottom: var(--sp-3); padding: 0.25rem 0.45rem; border-radius: 6px; background: rgba(255,180,84,0.12); color: var(--accent-2); font-size: 0.76rem; text-transform: uppercase; font-weight: 800; letter-spacing: 0.05em; }

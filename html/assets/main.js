@@ -12,13 +12,13 @@
     }
   }
   var siteRoot = assetBase.replace("assets/", "");
-  var DOWNLOAD_URL = "https://testflight.apple.com/join/estR1gfD";
+  var DOWNLOAD_URL = "https://apps.apple.com/us/app/luna-explorer/id6769616130";
 
   var NAV_LINKS = [
     { href: "#overview", text: "Overview", class: "nav-link--text" },
     { href: "#features", text: "Features", class: "nav-link--text" },
     { href: "#screenshots", text: "Screenshots", class: "nav-link--text" },
-    { href: DOWNLOAD_URL, text: "TestFlight", class: "btn btn--outline btn--small", external: true }
+    { href: DOWNLOAD_URL, text: "App Store", class: "btn btn--outline btn--small", external: true }
   ];
 
   var FOOTER_LINKS = [
